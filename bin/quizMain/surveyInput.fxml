@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="379.0" prefWidth="443.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizMain.Controller01">
+   <children>
+      <Label layoutX="134.0" layoutY="14.0" text="설문조사">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="66.0" text="여행 가고 싶은  곳">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="142.0" text="연령 구분">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="215.0" text="성별">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rdoOversea" layoutX="44.0" layoutY="109.0" mnemonicParsing="false" selected="true" text="해외여행">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="location" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdoLocal" layoutX="186.0" layoutY="109.0" mnemonicParsing="false" text="국내여행" toggleGroup="$location">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rdoNo" layoutX="323.0" layoutY="109.0" mnemonicParsing="false" text="없음" toggleGroup="$location">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rdo10" layoutX="44.0" layoutY="182.0" mnemonicParsing="false" selected="true" text="10대">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="age" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdo20" layoutX="135.0" layoutY="182.0" mnemonicParsing="false" text="20대" toggleGroup="$age">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rdo30" layoutX="226.0" layoutY="182.0" mnemonicParsing="false" text="30대" toggleGroup="$age">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rdo40" layoutX="322.0" layoutY="182.0" mnemonicParsing="false" text="40대" toggleGroup="$age">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rdoMan" layoutX="44.0" layoutY="255.0" mnemonicParsing="false" selected="true" text="남성">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdoWoman" layoutX="135.0" layoutY="253.0" mnemonicParsing="false" text="여성" toggleGroup="$gender">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="btnComp" layoutX="44.0" layoutY="308.0" mnemonicParsing="false" onAction="#surveyComp" prefHeight="27.0" prefWidth="102.0" text="확인">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancel" layoutX="170.0" layoutY="308.0" mnemonicParsing="false" onAction="#surveyCancel" prefHeight="27.0" prefWidth="102.0" text="취소">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnList" layoutX="293.0" layoutY="308.0" mnemonicParsing="false" onAction="#surveyList" prefHeight="38.0" prefWidth="116.0" text="결과보기">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
